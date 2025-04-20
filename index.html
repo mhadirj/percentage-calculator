@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oi&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @theme {
+        --font-Oi: "Oi", serif;
+        --color-text: #e5e9f5;
+        --color-background: #080b15;
+        --color-primary: #9babe1;
+        --color-secondary: #213881;
+        --color-accent: #3b5fd4;
+      }
+    </style>
+    <title>percentage calculator</title>
+  </head>
+  <body class="bg-background min-dh-screen font-Oi flex text-text">
+    <section class="flex flex-col items-center px-5 mx-auto">
+      <h1 class="text-xl my-12">محاسبه کننده درصد</h1>
+      <form
+        class="bg-secondary py-15 w-95 rounded-lg flex flex-col items-center gap-5 mt-5"
+        id="form"
+      >
+        <div class="flex items-center gap-25">
+          <label for="currect-aswers">تعداد جواب درست:</label>
+          <input
+            type="number"
+            class="bg-accent w-15 h-15 text-center rounded-lg"
+            id="correct-answers"
+            maxlength="2"
+          />
+        </div>
+        <div class="flex items-center gap-21">
+          <label for="wrong-answers">تعداد جواب نادرست:</label>
+          <input
+            type="number"
+            class="bg-accent w-15 h-15 text-center rounded-lg"
+            id="wrong-answers"
+            maxlength="2"
+          />
+        </div>
+        <div class="flex items-center gap-27">
+          <label for="all-questions">تعداد کل سوالات:</label>
+          <input
+            type="number"
+            class="bg-accent w-15 h-15 text-center rounded-lg"
+            id="all-questions"
+            maxlength="2"
+          />
+        </div>
+        <button
+          type="submit"
+          class="bg-primary px-7 py-5 rounded-lg mt-8 text-secondary"
+        >
+          محاسبه کن
+        </button>
+        <div class="mt-8">
+          <span>درصد شما:</span>
+          <span class="text-2xl mr-10 text-primary" id="percentage">55</span>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
